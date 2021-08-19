@@ -17,7 +17,6 @@ class CreateOptionsTable extends Migration
             $table->id();
             $table->integer('attribute_id')->unsigned()->nullable();
             $table->integer('product_id')->unsigned()->nullable();
-            $table->foreign('attribute_id')->references('id')->on('attributes')->onDelete('cascade');
              $table->foreign('product_id')->references('id')->on('products')->onDelete('cascade');
             $table->timestamps();
         });
